@@ -61,10 +61,15 @@ plugins:
   - serverless-webpack
 
 functions:
-  mabel:
-    handler: handler.mabel
+  mabel-command:
+    handler: handler.command
     events:
       - http: POST mabel/command
+
+  mabel-interactive:
+    handler: handler.interactive
+    events:
+      - http: POST mabel/interactive
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
